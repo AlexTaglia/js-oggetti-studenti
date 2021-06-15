@@ -54,9 +54,23 @@ studenti.push({
     age: studentAge
 })
 
-// Ciclare su tutti gli studenti 
+
+// Ciclare su tutti gli studenti
+
+// Solo con il for per stampare solo nome e cognome:
+/*
 for (var i = 0; i < studenti.length; i++) {
     htmlStringEs2 += "<li>" + studenti[i].name + " " + studenti[i].lastName + "</li>";
+}
+*/
+
+/*-----------------------------------
+Prova con "for in" però mi stampa tutte le proprietà..compresa l'età..
+*/
+for (var i = 0; i < studenti.length; i++) {
+    for (var key in studenti[i]) { 
+        htmlStringEs2 += "<li>" + key + ': ' + studenti[i][key] + "</li>";
+    }
 
 }
 
