@@ -32,10 +32,10 @@ outputStudente.innerHTML = htmlStringEs1;
 
 
 // ----------------------------------------------------------------------------------------------------------
-// Creare un array di oggetti di studenti. 
 var outputStudente = document.getElementById('parte2')
 var htmlStringEs2 = '';
 
+// Creare un array di oggetti di studenti. 
 var studenti = [
     { name: 'Iron', lastName: 'Man', age: 18 },
     { name: 'Capitan', lastName: 'America', age: 17 },
@@ -45,7 +45,6 @@ console.log(studenti);
 
 // Dare la possibilità all’utente, attraverso 3 prompt() - uno per ciascuna proprietà - 
 // di aggiungere UN SOLO oggetto studente inserendo nell’ordine: nome, cognome e età.
-
 var studentName = prompt('Inserisci il nome dello studente');
 var studentLastName = prompt('Inserisci il cognome dello studente');
 var studentAge = parseInt(prompt('Inserisci l\'età dello studente'));
@@ -55,7 +54,16 @@ studenti.push({
     age: studentAge
 })
 
-// Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.  
+// Ciclare su tutti gli studenti 
+for (var i = 0; i < studenti.length; i++) {
+    
+    // e stampare per ognuno di essi, nome e cognome.  
+    for (var key in studenti[i]) { 
+        // console.log(key, studenti[i][key])
+        htmlStringEs2 += "<li>" + studenti[i].name + " " + studenti[i].lastName + "</li>";
+    }
+
+}
 
 outputStudente.innerHTML = htmlStringEs2;
 
