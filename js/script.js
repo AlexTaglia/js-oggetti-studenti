@@ -56,12 +56,7 @@ studenti.push({
 
 // Ciclare su tutti gli studenti 
 for (var i = 0; i < studenti.length; i++) {
-    
-    // e stampare per ognuno di essi, nome e cognome.  
-    for (var key in studenti[i]) { 
-        // console.log(key, studenti[i][key])
-        htmlStringEs2 += "<li>" + studenti[i].name + " " + studenti[i].lastName + "</li>";
-    }
+    htmlStringEs2 += "<li>" + studenti[i].name + " " + studenti[i].lastName + "</li>";
 
 }
 
